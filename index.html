@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>domen martinčič</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Inter', sans-serif; color:#fff; text-transform:lowercase; background:#3d5863; }
@@ -48,7 +48,6 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
 @media (min-width:601px) { html,body { overflow-x:hidden; } #scx { display:block; } .slide-d { width:100vw; min-height:90vh; display:flex; align-items:center; justify-content:center; position:relative; } .slide-d:first-child { min-height:100vh; } .film-image-wrap { width:60%; aspect-ratio:16/9; overflow:hidden; flex-shrink:0; cursor:pointer; position:relative; } .film-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; } .film-image-wrap:hover img { filter:brightness(1.07); } .film-image-wrap.placeholder:hover { filter:brightness(1.07); } .film-meta { position:absolute; width:160px; text-align:right; opacity:1; pointer-events:none; } #films-mobile { display:none; } }
 @media (max-width:600px) { html,body { height:auto; overflow-x:hidden; overflow-y:auto; } #scx { display:none; } #films-mobile { padding-top:52px; display:flex; flex-direction:column; gap:0.5rem; } nav { padding:1.25rem 1.5rem; } .nav-links { display:none !important; } .hamburger { display:flex; } .mobile-menu { display:flex; } .about-panel { width:100%; right:0 !important; padding:5rem 2rem 3rem; background:rgba(0,0,0,0.92); opacity:0; pointer-events:none; transition:opacity 0.3s ease !important; } .about-panel.open { opacity:1; pointer-events:auto; } .about-close { display:none; } .about-overlay.active { background:rgba(0,0,0,0.75); } .slide-m { position:relative; width:100%; } .wrap-m { position:relative; width:calc(100% - 3rem); aspect-ratio:16/9; overflow:hidden; cursor:pointer; display:block; margin:0 1.5rem; } .wrap-m img { width:100%; height:100%; object-fit:cover; display:block; } .wrap-m::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); pointer-events:none; } .meta-m { position:absolute; bottom:0.75rem; left:2.35rem; pointer-events:none; } .meta-title { display:block; font-size:13px; font-weight:400; letter-spacing:0.06em; color:rgba(255,255,255,0.92); line-height:1.5; margin-bottom:0.15rem; } .meta-type { display:block; font-size:11px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.55); } }
 @media (max-width:900px) and (min-width:601px) { nav { padding:1.25rem 2rem; } .about-panel { width:100%; right:-100%; } }
-@media (max-width:600px) { .wrap-m { width:100% !important; margin:0 !important; } .meta-m { left:0.85rem !important; } }
 </style>
 </head>
 <body>
@@ -61,11 +60,7 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
   <div class="mobile-submenu" id="mob-cine-sub"></div>
   <a href="digital-large-format.html">digital large format</a>
   <a href="#" id="mob-about-link">about me</a>
-  </div>
-  <a href="#" id="mob-cine-toggle">cinematographer</a>
-  <div class="mobile-submenu" id="mob-cine-sub"></div>
-  <a href="#">digital large format</a>
-  <a href="#" id="mob-about-link">about me</a>
+  
 </div>
 <nav>
   <span class="nav-name">domen martinčič</span>
@@ -89,12 +84,12 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
 <div id="films-mobile"></div>
 <footer>© <span id="yr"></span> domen martinčič</footer>
 <script>
-var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#3d5863","#3d5863"],"slug":"a-tree-grows-in-my-dreams-every-night"},{"title":"the roommate","year":"/","type":"short","role":"director","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654196/Martincic_vjezba_snimateljsko_umijece_20Mbps.mov_snapshot_03.39.034_ee4tcs.jpg","grad":["#3a4d43","#6d897c"],"slug":"the-roommate"},{"title":"overtime","year":"2025","type":"feature","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775653913/overtime_aron_horvath__1.81.1_rozyq7.jpg","grad":["#252428","#49484e"],"slug":"overtime"},{"title":"film 04","year":"2021","type":"short","role":"cinematographer","img":"","grad":["#0a1020","#0d1a30"],"slug":"film-04"},{"title":"film 05","year":"2021","type":"documentary","role":"cinematographer","img":"","grad":["#100a00","#201500"],"slug":"film-05"},{"title":"film 06","year":"2020","type":"feature","role":"director","img":"","grad":["#1a0d00","#2e1a00"],"slug":"film-06"},{"title":"film 07","year":"2020","type":"short","role":"cinematographer","img":"","grad":["#0a1515","#0d2020"],"slug":"film-07"},{"title":"film 08","year":"2019","type":"documentary","role":"cinematographer","img":"","grad":["#101010","#1a1a1a"],"slug":"film-08"},{"title":"film 09","year":"2019","type":"feature","role":"director","img":"","grad":["#0a1015","#0d1a20"],"slug":"film-09"},{"title":"film 10","year":"2018","type":"short","role":"cinematographer","img":"","grad":["#100a15","#1a0d20"],"slug":"film-10"}];
+var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#3d5863","#3d5863"],"imgFit":"contain","slug":"a-tree-grows-in-my-dreams-every-night"},{"title":"the roommate","year":"2025","type":"short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736067/theroommate_domen_martincic_3_fus9ke.jpg","grad":["#4e5e89","#476842"],"imgFit":"contain","slug":"the-roommate"},{"title":"overtime","year":"in post-production","type":"feature","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775735804/overtime_aron_horvath_7_cw6tyb.jpg","grad":["#435e21","#49484e"],"imgFit":"contain","slug":"overtime"},{"title":"Diorama","year":"2025","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg","grad":["#928148","#0d1a30"],"imgFit":"contain","slug":"diorama"},{"title":"Belart - Triptich","year":"2023","type":"music short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734836/belart_triptih_irena_gatej_4_jrslly.jpg","grad":["#100a00","#61177c"],"imgFit":"cover","slug":"belart-triptich"},{"title":"film 06","year":"2020","type":"feature","role":"director","img":"","grad":["#1a0d00","#2e1a00"],"imgFit":"cover","slug":"film-06"},{"title":"film 07","year":"2020","type":"short","role":"cinematographer","img":"","grad":["#0a1515","#0d2020"],"imgFit":"cover","slug":"film-07"},{"title":"film 08","year":"2019","type":"documentary","role":"cinematographer","img":"","grad":["#101010","#1a1a1a"],"imgFit":"cover","slug":"film-08"},{"title":"film 09","year":"2019","type":"feature","role":"director","img":"","grad":["#0a1015","#0d1a20"],"imgFit":"cover","slug":"film-09"},{"title":"film 10","year":"2018","type":"short","role":"cinematographer","img":"","grad":["#100a15","#1a0d20"],"imgFit":"cover","slug":"film-10"}];
 var scx=document.getElementById('scx'),mob=document.getElementById('films-mobile'),dirDd=document.getElementById('dir-dd'),cineDd=document.getElementById('cine-dd'),mobDirSub=document.getElementById('mob-dir-sub'),mobCineSub=document.getElementById('mob-cine-sub'),GAP=32,META_WIDTH=160;
 films.forEach(function(film,idx){
   var sd=document.createElement('div');sd.className='slide-d';
   var wd=document.createElement('div');wd.className='film-image-wrap'+(film.img?'':' placeholder');
-  if(film.img){var id=document.createElement('img');id.src=film.img;id.alt=film.title;wd.appendChild(id);}
+  if(film.img){var id=document.createElement('img');id.src=film.img;id.alt=film.title;id.style.objectFit=(film.imgFit||'cover');if(film.imgFit==='contain'){wd.style.background='linear-gradient(135deg,'+film.grad[0]+','+film.grad[1]+')'}wd.appendChild(id);}
   else{wd.style.background='linear-gradient(135deg,'+film.grad[0]+','+film.grad[1]+')';}
   var md=document.createElement('div');md.className='film-meta';
   md.innerHTML='<span class="meta-value">'+film.title+'</span><span class="meta-value">'+film.year+'</span><span class="meta-value">'+film.type+'</span>';
@@ -102,7 +97,7 @@ films.forEach(function(film,idx){
   sd.appendChild(wd);sd.appendChild(md);scx.appendChild(sd);
   var sm=document.createElement('div');sm.className='slide-m';sm.id='sm-'+idx;
   var wm=document.createElement('div');wm.className='wrap-m';
-  if(film.img){var im=document.createElement('img');im.src=film.img;im.alt=film.title;wm.appendChild(im);}
+  if(film.img){var im=document.createElement('img');im.src=film.img;im.alt=film.title;im.style.objectFit=(film.imgFit||'cover');if(film.imgFit==='contain'){wm.style.background='linear-gradient(135deg,'+film.grad[0]+','+film.grad[1]+')'}wm.appendChild(im);}
   else{wm.style.background='linear-gradient(135deg,'+film.grad[0]+','+film.grad[1]+')';}
   if(film.slug){wm.addEventListener('click',function(){window.location.href=film.slug+'.html';});}
   var mm=document.createElement('div');mm.className='meta-m';
@@ -138,8 +133,8 @@ document.getElementById('mob-dir-toggle').addEventListener('click',function(e){e
 document.getElementById('mob-cine-toggle').addEventListener('click',function(e){e.preventDefault();mobCineSub.style.display=mobCineSub.style.display==='flex'?'none':'flex';});
 var aboutPanel=document.getElementById('aboutPanel'),aboutOverlay=document.getElementById('aboutOverlay'),aboutOpen=false;
 function toggleAbout(e){if(e)e.preventDefault();closeMob();aboutOpen=!aboutOpen;aboutPanel.classList.toggle('open',aboutOpen);aboutOverlay.classList.toggle('active',aboutOpen);document.body.classList.toggle('about-open',aboutOpen);}
-document.getElementById('about-link').addEventListener('click',toggleAbout);
-document.getElementById('mob-about-link').addEventListener('click',toggleAbout);
+var _al=document.getElementById('about-link');if(_al)_al.addEventListener('click',toggleAbout);
+var _mal=document.getElementById('mob-about-link');if(_mal)_mal.addEventListener('click',toggleAbout);
 document.getElementById('aboutClose').addEventListener('click',toggleAbout);
 aboutOverlay.addEventListener('click',toggleAbout);
 aboutPanel.addEventListener('click',toggleAbout);
