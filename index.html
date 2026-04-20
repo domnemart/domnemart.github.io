@@ -11,21 +11,25 @@
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+:root { --nav-rgb: 255,255,255; --nav-shadow-rgb: 0,0,0; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter', sans-serif; color:#fff; text-transform:lowercase; background:#3d5863; }
+body { font-family:'Inter', sans-serif; color:#fff; text-transform:lowercase; background:#526e79; }
 .bg-canvas { position:fixed; inset:0; z-index:-1; }
 nav { position:fixed; top:0; left:0; right:0; z-index:350; display:flex; justify-content:space-between; align-items:center; padding:1.5rem 3rem; }
-.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.75); }
+.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); transition:color 0.4s; }
 .nav-links { display:flex; gap:2.5rem; list-style:none; align-items:center; }
-.nav-links > li > a { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.75); text-decoration:none; transition:color 0.3s; }
-.nav-links > li > a:hover { color:#fff; }
+.nav-links > li > a { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); text-decoration:none; transition:color 0.3s; }
+.nav-links > li > a:hover { color:rgba(var(--nav-rgb),1); }
 .nav-item { position:relative; }
 .dropdown { display:none; position:absolute; top:100%; right:0; min-width:280px; padding:1.25rem 0 0.75rem 0; z-index:200; }
 .nav-item:hover .dropdown { display:block; }
-.dropdown a { display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.5); text-decoration:none; transition:color 0.2s; gap:1.5rem; }
-.dropdown a:hover { color:rgba(255,255,255,0.9); }
-.dropdown a .d-year { font-size:11px; color:rgba(255,255,255,0.25); flex-shrink:0; }
-.dropdown a:hover .d-year { color:rgba(255,255,255,0.5); }
+.nav-scrim { position:fixed; inset:0; z-index:300; background:rgba(0,0,0,0.45); opacity:0; pointer-events:none; transition:opacity 0.3s; }
+body:has(.nav-item:hover) .nav-scrim { opacity:1; }
+body:has(.nav-item:hover) { --nav-rgb: 255,255,255; --nav-shadow-rgb: 0,0,0; }
+.dropdown a { display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.5); text-decoration:none; transition:color 0.2s; gap:1.5rem; }
+.dropdown a:hover { color:rgba(var(--nav-rgb),0.9); }
+.dropdown a .d-year { font-size:11px; color:rgba(var(--nav-rgb),0.25); flex-shrink:0; }
+.dropdown a:hover .d-year { color:rgba(var(--nav-rgb),0.5); }
 .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; z-index:201; }
 .hamburger span { display:block; width:22px; height:1px; background:rgba(255,255,255,0.75); transition:all 0.35s ease; }
 .hamburger.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
@@ -39,17 +43,17 @@ nav { position:fixed; top:0; left:0; right:0; z-index:350; display:flex; justify
 .mobile-submenu .d-year { color:rgba(255,255,255,0.2); margin-left:0.75rem; }
 .about-panel { position:fixed; top:0; right:-420px; width:360px; height:100vh; z-index:300; display:flex; flex-direction:column; justify-content:center; padding:4rem 3rem; transition:right 0.5s ease; }
 .about-panel.open { right:0; }
-.about-panel p { font-size:12px; font-weight:300; letter-spacing:0.08em; color:rgba(255,255,255,0.7); line-height:2; margin-bottom:1rem; }
+.about-panel p { font-size:12px; font-weight:300; letter-spacing:0.08em; color:rgba(var(--nav-rgb),0.7); line-height:2; margin-bottom:1rem; }
 .about-panel .contact-block { margin-top:2rem; display:flex; flex-direction:column; gap:0.4rem; }
-.about-panel .contact-block span { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.45); }
+.about-panel .contact-block span { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.45); }
 .about-overlay { position:fixed; inset:0; z-index:150; background:rgba(0,0,0,0); pointer-events:none; transition:background 0.5s ease; }
 .about-overlay.active { background:rgba(0,0,0,0.25); pointer-events:auto; }
-.about-close { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); font-family:'Inter', sans-serif; font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.5); background:none; border:1px solid rgba(255,255,255,0.2); cursor:pointer; transition:all 0.2s; padding:0.5rem 1.25rem; white-space:nowrap; display:none; }
-.about-close:hover { color:rgba(255,255,255,0.9); border-color:rgba(255,255,255,0.5); }
+.about-close { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); font-family:'Inter', sans-serif; font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.5); background:none; border:1px solid rgba(var(--nav-rgb),0.2); cursor:pointer; transition:all 0.2s; padding:0.5rem 1.25rem; white-space:nowrap; display:none; }
+.about-close:hover { color:rgba(var(--nav-rgb),0.9); border-color:rgba(var(--nav-rgb),0.5); }
 .slide-d { transition:transform 0.5s ease; }
 body.about-open .slide-d { transform:translateX(-180px); }
-.meta-value { display:block; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.7); line-height:1.9; }
-footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.2); }
+.meta-value { display:block; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.7); line-height:1.9; }
+footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.2); }
 @media (min-width:601px) { html,body { overflow-x:hidden; } #scx { display:block; } .slide-d { width:100vw; min-height:90vh; display:flex; align-items:center; justify-content:center; position:relative; } .slide-d:first-child { min-height:100vh; } .film-image-wrap { width:60%; flex-shrink:0; cursor:pointer; position:relative; } .film-image-wrap img { width:100%; display:block; } .film-image-wrap:hover img { filter:brightness(1.07); } .film-image-wrap.placeholder:hover { filter:brightness(1.07); } .film-meta { position:absolute; width:160px; text-align:right; opacity:1; pointer-events:none; } #films-mobile { display:none; } }
 @media (max-width:600px) { html,body { height:auto; overflow-x:hidden; overflow-y:auto; } #scx { display:none; } #films-mobile { padding-top:52px; display:flex; flex-direction:column; gap:0.5rem; } nav { padding:1.25rem 1.5rem; } .nav-links { display:none !important; } .hamburger { display:flex; } .mobile-menu { display:flex; } .about-panel { width:100%; right:0 !important; padding:5rem 2rem 3rem; background:rgba(0,0,0,0.92); opacity:0; pointer-events:none; transition:opacity 0.3s ease !important; } .about-panel.open { opacity:1; pointer-events:auto; } .about-close { display:none; } .about-overlay.active { background:rgba(0,0,0,0.75); } .slide-m { position:relative; width:100%; } .wrap-m { position:relative; width:calc(100% - 3rem); cursor:pointer; display:block; margin:0 1.5rem; } .wrap-m img { width:100%; display:block; } .wrap-m::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); pointer-events:none; } .meta-m { position:absolute; bottom:0.75rem; left:2.35rem; pointer-events:none; } .meta-title { display:block; font-size:13px; font-weight:400; letter-spacing:0.06em; color:rgba(255,255,255,0.92); line-height:1.5; margin-bottom:0.15rem; } .meta-type { display:block; font-size:11px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.55); } }
 @media (max-width:900px) and (min-width:601px) { nav { padding:1.25rem 2rem; } .about-panel { width:100%; right:-100%; } }
@@ -64,7 +68,7 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
   <a href="#" id="mob-cine-toggle">cinematographer</a>
   <div class="mobile-submenu" id="mob-cine-sub"></div>
   <a href="digital-large-format.html">digital large format</a>
-  <a href="#" id="mob-about-link">about me</a>
+  <a href="#" id="mob-about-link">about</a>
   
 </div>
 <nav>
@@ -73,11 +77,12 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
     <li class="nav-item"><a href="#">director</a><div class="dropdown" id="dir-dd"></div></li>
     <li class="nav-item"><a href="#">cinematographer</a><div class="dropdown" id="cine-dd"></div></li>
     <li><a href="digital-large-format.html">digital large format</a></li>
-    <li><a href="#" id="about-link">about me</a></li>
+    <li><a href="#" id="about-link">about</a></li>
     
   </ul>
   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
+<div class="nav-scrim"></div>
 <div class="about-panel" id="aboutPanel">
   <button class="about-close" id="aboutClose">← back</button>
 <p>domen martinčič is a director and cinematographer based in ljubljana. his work spans documentary, short and feature film, with a focus on intimate human stories and striking visual language.</p>
@@ -89,7 +94,7 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
 <div id="films-mobile"></div>
 <footer>© <span id="yr"></span> domen martinčič</footer>
 <script>
-var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#3d5863","#3d5863"],"imgFit":"natural","slug":"a-tree-grows-in-my-dreams-every-night"},{"title":"the roommate","year":"2025","type":"short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736067/theroommate_domen_martincic_3_fus9ke.jpg","grad":["#4e5e89","#4e5e89"],"imgFit":"natural","slug":"the-roommate"},{"title":"overtime","year":"in post-production","type":"feature","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775735804/overtime_aron_horvath_7_cw6tyb.jpg","grad":["#435e21","#435e21"],"imgFit":"natural","slug":"overtime"},{"title":"Diorama","year":"2025","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg","grad":["#928148","#928148"],"imgFit":"fit-height","slug":"diorama"},{"title":"Belart - Triptich","year":"2023","type":"music short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734836/belart_triptih_irena_gatej_4_jrslly.jpg","grad":["#100a00","#100a00"],"imgFit":"natural","slug":"belart-triptich"},{"title":"film 06","year":"2020","type":"feature","role":"director","img":"","grad":["#1a0d00","#1a0d00"],"imgFit":"natural","slug":"film-06"},{"title":"film 07","year":"2020","type":"short","role":"cinematographer","img":"","grad":["#0a1515","#0a1515"],"imgFit":"natural","slug":"film-07"},{"title":"film 08","year":"2019","type":"documentary","role":"cinematographer","img":"","grad":["#101010","#101010"],"imgFit":"natural","slug":"film-08"},{"title":"film 09","year":"2019","type":"feature","role":"director","img":"","grad":["#0a1015","#0a1015"],"imgFit":"natural","slug":"film-09"},{"title":"film 10","year":"2018","type":"short","role":"cinematographer","img":"","grad":["#100a15","#100a15"],"imgFit":"natural","slug":"film-10"}];
+var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#526e79","#526e79"],"imgFit":"natural","slug":"a-tree-grows-in-my-dreams-every-night","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"the roommate","year":"2025","type":"short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736067/theroommate_domen_martincic_3_fus9ke.jpg","grad":["#c6d3df","#c6d3df"],"imgFit":"natural","slug":"the-roommate","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"overtime","year":"in post-production","type":"feature","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775735804/overtime_aron_horvath_7_cw6tyb.jpg","grad":["#c6d6cb","#c6d6cb"],"imgFit":"natural","slug":"overtime","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Diorama","year":"2025","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg","grad":["#cad5c7","#cad5c7"],"imgFit":"fit-height","slug":"diorama","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Belart - Triptich","year":"2023","type":"music short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734836/belart_triptih_irena_gatej_4_jrslly.jpg","grad":["#1e1821","#1e1821"],"imgFit":"natural","slug":"belart-triptich","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Joža","year":"2022","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734629/joza_jan_krevatin_5_rjgf1t.jpg","grad":["#c2d5db","#c2d5db"],"imgFit":"fit-height","slug":"jo-a","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"The Stranger","year":"2024","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736548/stranger_milorad_milatovic_4_liwuo3.jpg","grad":["#d4d1c1","#d4d1c1"],"imgFit":"fit-height","slug":"the-stranger","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"I ja tebe isto","year":"2022","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734506/i_ja_tebe_isto_antonio_perina_5_i70oez.jpg","grad":["#211911","#211911"],"imgFit":"natural","slug":"i-ja-tebe-isto","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"The Last Summer","year":"2020","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775668053/Jost_grade_1_5-37_screenshot_vjfbn2.png","grad":["#c9d5c8","#c9d5c8"],"imgFit":"natural","slug":"the-last-summer","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Belart - v noč","year":"2021","type":"music video","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731768/V_NOC.mov_snapshot_01.07.159_jemebt.jpg","grad":["#d7d0c1","#d7d0c1"],"imgFit":"natural","slug":"belart-v-no","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Rosebud","year":"2020","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731502/2021_06_20_Ruzicnjak.mp4.00_04_43_24.Still004_quecjo.jpg","grad":["#151b24","#151b24"],"imgFit":"fit-height","slug":"rosebud","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Free-form Assignment","year":"2018","type":"short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1776686088/slobodna_domen_martincic_1_aodp3d.jpg","grad":["#1a1a1a","#1a1a1a"],"imgFit":"fit-height","slug":"free-form-assignment","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"1319th Day","year":"2016","type":"short","role":"director","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736639/1319_dan_martincic_05_dthi5b.jpg","grad":["#c3d6d0","#c3d6d0"],"imgFit":"fit-height","slug":"1319th-day","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Ljubljana-München 15:27","year":"2016","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775847113/lj_mn_01_guatte.jpg","grad":["#d9d0c1","#d9d0c1"],"imgFit":"natural","slug":"ljubljana-m-nchen-15-27","navRgb":"28,28,28","navShadowRgb":"255,255,255"}];
 var scx=document.getElementById('scx'),mob=document.getElementById('films-mobile'),dirDd=document.getElementById('dir-dd'),cineDd=document.getElementById('cine-dd'),mobDirSub=document.getElementById('mob-dir-sub'),mobCineSub=document.getElementById('mob-cine-sub'),GAP=32,META_WIDTH=160;
 films.forEach(function(film,idx){
   var sd=document.createElement('div');sd.className='slide-d';
@@ -149,7 +154,7 @@ function lerp(a,b,t){return[Math.round(a[0]+(b[0]-a[0])*t),Math.round(a[1]+(b[1]
 function rgb(c){return'rgb('+c[0]+','+c[1]+','+c[2]+')';}
 var canvas=document.getElementById('bgCanvas'),ctx=canvas.getContext('2d');
 var lastProg=0;function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;updateBg(lastProg);}resizeCanvas();window.addEventListener('resize',resizeCanvas);
-function updateBg(prog){lastProg=prog;var i=Math.min(Math.floor(prog),films.length-1),t=Math.min(prog-i,1),n=Math.min(i+1,films.length-1);var c=lerp(hexToRgb(films[i].grad[0]),hexToRgb(films[n].grad[0]),t);ctx.fillStyle=rgb(c);ctx.fillRect(0,0,canvas.width,canvas.height);}
+function updateBg(prog){lastProg=prog;var i=Math.min(Math.floor(prog),films.length-1),t=Math.min(prog-i,1),n=Math.min(i+1,films.length-1);var c=lerp(hexToRgb(films[i].grad[0]),hexToRgb(films[n].grad[0]),t);ctx.fillStyle=rgb(c);ctx.fillRect(0,0,canvas.width,canvas.height);var ni=t<0.5?i:n;if(films[ni]&&films[ni].navRgb){document.documentElement.style.setProperty('--nav-rgb',films[ni].navRgb);document.documentElement.style.setProperty('--nav-shadow-rgb',films[ni].navShadowRgb||'0,0,0');}}
 window.addEventListener('scroll',function(){var isDesktop=window.innerWidth>600;var slides=isDesktop?scx.querySelectorAll('.slide-d'):mob.querySelectorAll('.slide-m');var sy=window.scrollY,vh=window.innerHeight,vpCenter=sy+vh/2,prog=0;var centers=[];for(var i=0;i<slides.length;i++)centers.push(slides[i].offsetTop+slides[i].offsetHeight/2);if(vpCenter<=centers[0])prog=0;else if(vpCenter>=centers[centers.length-1])prog=films.length-1;else{for(var i=0;i<centers.length-1;i++){if(vpCenter>=centers[i]&&vpCenter<centers[i+1]){prog=i+(vpCenter-centers[i])/(centers[i+1]-centers[i]);break;}}}updateBg(Math.max(0,prog));},{passive:true});
 updateBg(0);
 document.getElementById('yr').textContent=new Date().getFullYear();
