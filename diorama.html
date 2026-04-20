@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diorama — domen martinčič</title>
+<meta name="description" content="A woman recalls a childhood memory of the first signs of her grandmother's Alzheimer's, yet as the narrative unfolds, it becomes evident that all the members of">
 <meta property="og:type" content="video.movie">
 <meta property="og:title" content="Diorama — domen martinčič">
-<meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+<meta property="og:description" content="A woman recalls a childhood memory of the first signs of her grandmother's Alzheimer's, yet as the narrative unfolds, it becomes evident that all the members of">
+<meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734905/diorama_vida_skerk_11_dd13be.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Roboto Mono', monospace; background:#0f0f0f; color:#ffffff; text-transform:lowercase; min-height:100vh; }
+body { font-family:'Inter', sans-serif; background:#0f0f0f; color:#ffffff; text-transform:lowercase; min-height:100vh; }
 nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
 .nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.6); text-decoration:none; }
 .nav-back { font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.4); text-decoration:none; transition:color 0.2s; }
@@ -31,7 +33,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .credit-label { font-size:10px; letter-spacing:0.25em; color:rgba(255,255,255,0.2); }
 .credit-value { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.6); }
 .accordion { display:flex; flex-direction:column; gap:0; }
-.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Roboto Mono', monospace; font-size:10px; font-weight:300; letter-spacing:0.25em; color:rgba(255,255,255,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
+.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif; font-size:10px; font-weight:300; letter-spacing:0.25em; color:rgba(255,255,255,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
 .accordion-toggle:hover { color:rgba(255,255,255,0.7); }
 .accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:9px; }
 .accordion-toggle.open .acc-arrow { transform:rotate(180deg); }
@@ -44,14 +46,19 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .imdb-btn:hover { color:rgba(255,255,255,0.9); }
 .right { padding:3rem 3rem 0; display:flex; flex-direction:column; gap:4px; }
 .right-footer { text-align:center; padding:2rem 0; font-size:11px; letter-spacing:0.2em; color:rgba(255,255,255,0.15); margin-top:2rem; }
-.hero-img { width:100%; aspect-ratio:16/9; overflow:hidden; margin-bottom:4px; }
-.hero-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.hero-img { width:100%; margin-bottom:4px; }
+.hero-img img { width:100%; height:auto; display:block; }
 .hero-video { width:100%; aspect-ratio:16/9; background:#000; margin-bottom:4px; }
 .hero-video iframe { width:100%; height:100%; border:none; display:block; }
 .gallery { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
-.gallery-item { aspect-ratio:16/9; overflow:hidden; cursor:pointer; }
-.gallery-item img { width:100%; height:100%; object-fit:cover; display:block; transition:filter 0.15s; }
-.gallery-item:hover img { filter:brightness(1.2); }
+.gallery-item {  }
+.gallery-item img { width:100%; height:auto; display:block; }
+.gallery-item { cursor:zoom-in; }
+.gallery-item img { transition:opacity 0.15s; }
+.gallery-item:hover img { opacity:0.85; }
+#lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; }
+#lb.open { display:flex; }
+#lb img { max-width:90vw; max-height:90vh; object-fit:contain; }
 @media (max-width:768px) {
   .split { display:flex; flex-direction:column; }
   .left { display:contents; }
@@ -68,7 +75,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
   .accordion     { order:8; padding:0 1.5rem; margin-top:1rem; }
   .imdb-btn      { order:9; margin:1.25rem 1.5rem 0; display:block; }
   .right-footer  { order:10; padding:2rem; }
-  .gallery-item  { aspect-ratio:16/9; width:100%; }
+  .gallery-item  { width:100%; }
 }
 </style>
 </head>
@@ -81,19 +88,20 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
   <div class="left">
     <div class="left-top">
       <h1 class="film-title">Diorama</h1>
-      <div class="film-basic"><span>2025</span><span>short</span></div>
-      
+      <div class="film-basic"><span>2025</span><span>short</span><span>9 min</span></div>
+      <div class="synopsis"><p>A woman recalls a childhood memory of the first signs of her grandmother's Alzheimer's, yet as the narrative unfolds, it becomes evident that all the members of her family share a fear of forgetting the past - not only their personal past, but the historical, wider kind, as well.</p></div>
     </div>
-    <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value"></span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">domen martinčič</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value"></span></div><div class="credit-item"><span class="credit-label">producer</span><span class="credit-value"></span></div><div class="credit-item"><span class="credit-label">editor</span><span class="credit-value"></span></div><div class="credit-item"><span class="credit-label">sound</span><span class="credit-value"></span></div></div>
+    <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Vida Skerk</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">domen martinčič</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value">ADU</span></div><div class="credit-item"><span class="credit-label">producer</span><span class="credit-value">Tibor Vukelić</span></div><div class="credit-item"><span class="credit-label">editor</span><span class="credit-value">Lucija Strugar</span></div><div class="credit-item"><span class="credit-label">art director</span><span class="credit-value">Mirna Pezerović</span></div></div>
     
-    
+    <a class="imdb-btn" href="https://www.imdb.com/title/tt39089886/?ref_=nv_sr_srsg_3_tt_8_nm_0_in_0_q_diorama" target="_blank">imdb ↗</a>
   </div>
   <div class="right">
-    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg" alt="Diorama" style="object-fit:cover"></div>
-    
+    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734905/diorama_vida_skerk_11_dd13be.jpg" alt="Diorama" ></div>
+    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734907/diorama_vida_skerk_13_fudp7m.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734909/diorama_vida_skerk_14_nmj4hv.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734901/diorama_vida_skerk_7_sqcf7i.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734895/diorama_vida_skerk_1_no8bur.jpg" alt="" ></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
+<div id="lb"><img id="lbImg" src="" alt=""></div>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 function toggleAcc() {
@@ -103,6 +111,16 @@ function toggleAcc() {
   toggle.classList.toggle('open');
   body.classList.toggle('open');
 }
+var _lb=document.getElementById('lb');
+document.querySelectorAll('.gallery-item').forEach(function(item){
+  item.addEventListener('click',function(){
+    var src=item.querySelector('img').src;
+    document.getElementById('lbImg').src=src;
+    _lb.classList.add('open');
+  });
+});
+_lb.addEventListener('click',function(){_lb.classList.remove('open');document.getElementById('lbImg').src='';});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){_lb.classList.remove('open');document.getElementById('lbImg').src='';}});
 </script>
 </body>
 </html>
