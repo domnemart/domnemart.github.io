@@ -61,10 +61,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
   .left-top { display:contents; }
   .right { display:contents; }
   .film-title    { order:1; padding:1.25rem 1.5rem 0.25rem; }
-  .film-title-orig { order:2; padding:0 1.5rem 0.75rem; }
+  .film-title-orig { order:2; padding:0 1.5rem 0.75rem; margin-top:0; }
+  .film-title-orig::before { content:''; }
   .film-basic    { order:3; padding:0 1.5rem 0.5rem; }
   .synopsis      { order:4; padding:0 1.5rem 1rem; }
-  .hero-img      { order:5; margin-bottom:0; padding:0 1.5rem; }
+  .hero-img      { order:5; margin:0 1.5rem; padding:0; width:calc(100% - 3rem); }
   .hero-video    { order:5; margin-bottom:0; padding:0 1.5rem; }
   .gallery       { order:6; display:flex; flex-direction:column; gap:0.5rem; padding:0.5rem 1.5rem 0; }
   .credits       { order:7; padding:1.25rem 1.5rem 0; }
@@ -93,8 +94,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
     <a class="imdb-btn" href="https://www.imdb.com/title/tt31546676/?ref_=nv_sr_srsg_0_tt_1_nm_0_in_0_q_v%20mojih%20sanjah" target="_blank">imdb ↗</a>
   </div>
   <div class="right">
-    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735284/a_tree_grows_in_my_dreams_vid_hajnsek_10_w4e2xe.jpg" alt="a tree grows in my dreams every night" style="object-fit:cover"></div>
-    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735290/a_tree_grows_in_my_dreams_vid_hajnsek_5_j0next.jpg" alt="" style="object-fit:cover"></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735287/a_tree_grows_in_my_dreams_vid_hajnsek_7_crrsh7.jpg" alt="" style="object-fit:cover"></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735292/a_tree_grows_in_my_dreams_vid_hajnsek_4_gvumwp.jpg" alt="" style="object-fit:cover"></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735289/a_tree_grows_in_my_dreams_vid_hajnsek_6_ehoeup.jpg" alt="" style="object-fit:cover"></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735286/a_tree_grows_in_my_dreams_vid_hajnsek_8_j1kqcr.jpg" alt="" style="object-fit:cover"></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735282/a_tree_grows_in_my_dreams_vid_hajnsek_9_ja2pqv.jpg" alt="" style="object-fit:cover"></div></div>
+    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735284/a_tree_grows_in_my_dreams_vid_hajnsek_10_w4e2xe.jpg" alt="a tree grows in my dreams every night" style="object-fit:cover;" ></div>
+    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735290/a_tree_grows_in_my_dreams_vid_hajnsek_5_j0next.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735287/a_tree_grows_in_my_dreams_vid_hajnsek_7_crrsh7.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735292/a_tree_grows_in_my_dreams_vid_hajnsek_4_gvumwp.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735289/a_tree_grows_in_my_dreams_vid_hajnsek_6_ehoeup.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735286/a_tree_grows_in_my_dreams_vid_hajnsek_8_j1kqcr.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775735282/a_tree_grows_in_my_dreams_vid_hajnsek_9_ja2pqv.jpg" alt="" style="object-fit:cover;" ></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
