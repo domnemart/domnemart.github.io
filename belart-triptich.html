@@ -7,10 +7,10 @@
 <meta property="og:type" content="video.movie">
 <meta property="og:title" content="Belart - Triptich — domen martinčič">
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734838/belart_triptih_irena_gatej_2_gdjnfn.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Roboto Mono', monospace; background:#0f0f0f; color:#ffffff; text-transform:lowercase; min-height:100vh; }
+body { font-family:'Inter', sans-serif; background:#212121; color:#ffffff; text-transform:lowercase; min-height:100vh; }
 nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
 .nav-name { font-size:15px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.6); text-decoration:none; }
 .nav-back { font-size:13px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.4); text-decoration:none; transition:color 0.2s; }
@@ -31,7 +31,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .credit-label { font-size:11px; letter-spacing:0.25em; color:rgba(255,255,255,0.2); }
 .credit-value { font-size:13px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.6); }
 .accordion { display:flex; flex-direction:column; gap:0; }
-.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Roboto Mono', monospace; font-size:11px; font-weight:300; letter-spacing:0.25em; color:rgba(255,255,255,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
+.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif; font-size:11px; font-weight:300; letter-spacing:0.25em; color:rgba(255,255,255,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
 .accordion-toggle:hover { color:rgba(255,255,255,0.7); }
 .accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:10px; }
 .accordion-toggle.open .acc-arrow { transform:rotate(180deg); }
@@ -40,7 +40,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .accordion-inner { overflow:hidden; padding-bottom:0.5rem; }
 .festival-item { font-size:13px; font-weight:300; letter-spacing:0.06em; color:rgba(255,255,255,0.55); line-height:1.8; padding:0.2rem 0; }
 .festival-item .fest-award { font-size:11px; letter-spacing:0.15em; color:rgba(255,255,255,0.25); display:block; }
-.imdb-btn { display:inline-block; margin-top:2rem; font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.45); text-decoration:none; transition:color 0.2s; }
+.links-block { margin-top:2rem; display:flex; flex-direction:column; gap:0.35rem; }
+.imdb-btn { display:block; font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.45); text-decoration:none; transition:color 0.2s; }
 .imdb-btn:hover { color:rgba(255,255,255,0.9); }
 .right { padding:3rem 3rem 0; display:flex; flex-direction:column; gap:4px; }
 .right-footer { text-align:center; padding:2rem 0; font-size:12px; letter-spacing:0.2em; color:rgba(255,255,255,0.15); margin-top:2rem; }
@@ -65,7 +66,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
   .gallery       { order:6; display:flex; flex-direction:column; gap:0.5rem; padding:0.5rem 1.5rem 0; }
   .credits       { order:7; padding:1.25rem 1.5rem 0; }
   .accordion     { order:8; padding:0 1.5rem; margin-top:1rem; }
-  .imdb-btn      { order:9; margin:1.25rem 1.5rem 0; display:block; }
+  .links-block   { order:9; margin:1.25rem 1.5rem 0; }
+  .imdb-btn      { margin:0; }
   .right-footer  { order:10; padding:2rem; }
   .gallery-item  { width:100%; }
 }
@@ -86,11 +88,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
     </div>
     <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Irena Gatej</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">domen martinčič</span></div><div class="credit-item"><span class="credit-label">art director</span><span class="credit-value">Petra Kriletić</span></div></div>
     
-    
+    <div class="links-block"><a class="imdb-btn" href="https://www.youtube.com/watch?v=FMz7qDzfqWU" target="_blank">watch →</a></div>
   </div>
   <div class="right">
-    <div class="hero-video"><iframe src="https://www.youtube-nocookie.com/embed/FMz7qDzfqWU" allowfullscreen></iframe></div>
-    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734833/belart_triptih_irena_gatej_1_mnoqwu.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734831/belart_triptih_irena_gatej_6.001_whhfw0.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734828/belart_triptih_irena_gatej_9_vr8wt4.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734822/belart_triptih_irena_gatej_5_qorrcx.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734819/belart_triptih_irena_gatej_7_fvefsx.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734817/belart_triptih_irena_gatej_8_ranff8.jpg" alt="" ></div></div>
+    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734838/belart_triptih_irena_gatej_2_gdjnfn.jpg" alt="Belart - Triptich" ></div>
+    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734822/belart_triptih_irena_gatej_5_qorrcx.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734831/belart_triptih_irena_gatej_6.001_whhfw0.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734833/belart_triptih_irena_gatej_1_mnoqwu.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734819/belart_triptih_irena_gatej_7_fvefsx.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734828/belart_triptih_irena_gatej_9_vr8wt4.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775734817/belart_triptih_irena_gatej_8_ranff8.jpg" alt="" ></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
