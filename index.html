@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>domen martinčič</title>
-<meta name="description" content="domen martinčič is a director and cinematographer based in ljubljana. his work spans documentary, short and feature film, with a focus on intimate human stories">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="domen martinčič">
-<meta property="og:description" content="domen martinčič is a director and cinematographer based in ljubljana. his work spans documentary, short and feature film, with a focus on intimate human stories">
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg">
+<meta property="og:url" content="https://domnemart.github.io/index.html">
+<link rel="canonical" href="https://domnemart.github.io/index.html">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root { --nav-rgb: 255,255,255; --nav-shadow-rgb: 0,0,0; }
@@ -16,19 +17,17 @@
 body { font-family:'Inter', sans-serif; color:#fff; text-transform:lowercase; background:#526e79; }
 .bg-canvas { position:fixed; inset:0; z-index:-1; }
 nav { position:fixed; top:0; left:0; right:0; z-index:350; display:flex; justify-content:space-between; align-items:center; padding:1.5rem 3rem; }
-.nav-name { font-size:15px; font-weight:400; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); transition:color 0.4s; }
+.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); transition:color 0.4s; }
 .nav-links { display:flex; gap:2.5rem; list-style:none; align-items:center; }
-.nav-links > li > a { font-size:15px; font-weight:400; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); text-decoration:none; transition:color 0.3s; }
+.nav-links > li > a { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(var(--nav-rgb),0.75); text-decoration:none; transition:color 0.3s; }
 .nav-links > li > a:hover { color:rgba(var(--nav-rgb),1); }
 .nav-item { position:relative; }
 .dropdown { display:none; position:absolute; top:100%; right:0; min-width:280px; padding:1.25rem 0 0.75rem 0; z-index:200; }
 .nav-item:hover .dropdown { display:block; }
-.nav-scrim { position:fixed; inset:0; z-index:300; background:rgba(0,0,0,0.45); opacity:0; pointer-events:none; transition:opacity 0.3s; }
-body:has(.nav-item:hover) .nav-scrim { opacity:1; }
-body:has(.nav-item:hover) { --nav-rgb: 255,255,255; --nav-shadow-rgb: 0,0,0; }
-.dropdown a { display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:13px; font-weight:400; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.5); text-decoration:none; transition:color 0.2s; gap:1.5rem; }
+.nav-item:hover #dir-dd,.nav-item:hover #cine-dd { display:none; }
+.dropdown a { display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.5); text-decoration:none; transition:color 0.2s; gap:1.5rem; }
 .dropdown a:hover { color:rgba(var(--nav-rgb),0.9); }
-.dropdown a .d-year { font-size:12px; color:rgba(var(--nav-rgb),0.25); flex-shrink:0; }
+.dropdown a .d-year { font-size:11px; color:rgba(var(--nav-rgb),0.25); flex-shrink:0; }
 .dropdown a:hover .d-year { color:rgba(var(--nav-rgb),0.5); }
 .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; z-index:201; }
 .hamburger span { display:block; width:22px; height:1px; background:rgba(255,255,255,0.75); transition:all 0.35s ease; }
@@ -37,26 +36,36 @@ body:has(.nav-item:hover) { --nav-rgb: 255,255,255; --nav-shadow-rgb: 0,0,0; }
 .hamburger.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
 .mobile-menu { display:none; position:fixed; inset:0; z-index:198; flex-direction:column; align-items:center; justify-content:center; gap:2rem; opacity:0; pointer-events:none; transition:opacity 0.4s ease; }
 .mobile-menu.open { opacity:1; pointer-events:auto; background:rgba(0,0,0,0.75); }
-.mobile-menu > a { font-size:18px; font-weight:400; letter-spacing:0.2em; color:rgba(255,255,255,0.85); text-decoration:none; }
+.mobile-menu > a { font-size:17px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.85); text-decoration:none; }
 .mobile-submenu { display:none; flex-direction:column; align-items:center; gap:0.75rem; margin-top:-1rem; }
-.mobile-submenu a { font-size:13px; letter-spacing:0.15em; color:rgba(255,255,255,0.45); text-decoration:none; }
+.mobile-submenu a { font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.45); text-decoration:none; }
 .mobile-submenu .d-year { color:rgba(255,255,255,0.2); margin-left:0.75rem; }
 .about-panel { position:fixed; top:0; right:-420px; width:360px; height:100vh; z-index:300; display:flex; flex-direction:column; justify-content:center; padding:4rem 3rem; transition:right 0.5s ease; }
 .about-panel.open { right:0; }
-.about-panel p { font-size:13px; font-weight:400; letter-spacing:0.08em; color:rgba(var(--nav-rgb),0.7); line-height:2; margin-bottom:1rem; }
+.about-panel p { font-size:12px; font-weight:300; letter-spacing:0.08em; color:rgba(var(--nav-rgb),0.7); line-height:2; margin-bottom:1rem; }
 .about-panel .contact-block { margin-top:2rem; display:flex; flex-direction:column; gap:0.4rem; }
-.about-panel .contact-block span { font-size:13px; font-weight:400; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.45); }
+.about-panel .contact-block span { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.45); }
 .about-overlay { position:fixed; inset:0; z-index:150; background:rgba(0,0,0,0); pointer-events:none; transition:background 0.5s ease; }
 .about-overlay.active { background:rgba(0,0,0,0.25); pointer-events:auto; }
-.about-close { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); font-family:'Inter', sans-serif; font-size:13px; font-weight:400; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.5); background:none; border:1px solid rgba(var(--nav-rgb),0.2); cursor:pointer; transition:all 0.2s; padding:0.5rem 1.25rem; white-space:nowrap; display:none; }
+.about-close { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); font-family:'Inter', sans-serif; font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.5); background:none; border:1px solid rgba(var(--nav-rgb),0.2); cursor:pointer; transition:all 0.2s; padding:0.5rem 1.25rem; white-space:nowrap; display:none; }
 .about-close:hover { color:rgba(var(--nav-rgb),0.9); border-color:rgba(var(--nav-rgb),0.5); }
 .slide-d { transition:transform 0.5s ease; }
 body.about-open .slide-d { transform:translateX(-180px); }
-.meta-value { display:block; font-size:13px; font-weight:400; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.7); line-height:1.9; }
-footer { text-align:center; padding:3rem; font-size:12px; font-weight:400; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.2); }
+.meta-value { display:block; font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(var(--nav-rgb),0.7); line-height:1.9; }
+footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; letter-spacing:0.2em; color:rgba(var(--nav-rgb),0.2); }
 @media (min-width:601px) { html,body { overflow-x:hidden; } #scx { display:block; } .slide-d { width:100vw; min-height:90vh; display:flex; align-items:center; justify-content:center; position:relative; } .slide-d:first-child { min-height:100vh; } .film-image-wrap { width:60%; flex-shrink:0; cursor:pointer; position:relative; } .film-image-wrap img { width:100%; display:block; } .film-image-wrap:hover img { filter:brightness(1.07); } .film-image-wrap.placeholder:hover { filter:brightness(1.07); } .film-meta { position:absolute; width:160px; text-align:right; opacity:1; pointer-events:none; } #films-mobile { display:none; } }
-@media (max-width:600px) { html,body { height:auto; overflow-x:hidden; overflow-y:auto; } #scx { display:none; } #films-mobile { padding-top:52px; display:flex; flex-direction:column; gap:0.5rem; } nav { padding:1.25rem 1.5rem; } .nav-links { display:none !important; } .hamburger { display:flex; } .mobile-menu { display:flex; } .about-panel { width:100%; right:0 !important; padding:5rem 2rem 3rem; background:rgba(0,0,0,0.92); opacity:0; pointer-events:none; transition:opacity 0.3s ease !important; } .about-panel.open { opacity:1; pointer-events:auto; } .about-close { display:none; } .about-overlay.active { background:rgba(0,0,0,0.75); } .slide-m { position:relative; width:100%; } .wrap-m { position:relative; width:calc(100% - 3rem); cursor:pointer; display:block; margin:0 1.5rem; } .wrap-m img { width:100%; display:block; } .wrap-m::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); pointer-events:none; } .meta-m { position:absolute; bottom:0.75rem; left:2.35rem; pointer-events:none; } .meta-title { display:block; font-size:14px; font-weight:500; letter-spacing:0.06em; color:rgba(255,255,255,0.92); line-height:1.5; margin-bottom:0.15rem; } .meta-type { display:block; font-size:12px; font-weight:400; letter-spacing:0.15em; color:rgba(255,255,255,0.55); } }
+@media (max-width:600px) { html,body { height:auto; overflow-x:hidden; overflow-y:auto; } #scx { display:none; } #films-mobile { padding-top:52px; display:flex; flex-direction:column; gap:0.5rem; } nav { padding:1.25rem 1.5rem; } .nav-links { display:none !important; } .hamburger { display:flex; } .mobile-menu { display:flex; } .about-panel { width:100%; right:0 !important; padding:5rem 2rem 3rem; background:rgba(0,0,0,0.92); opacity:0; pointer-events:none; transition:opacity 0.3s ease !important; } .about-panel.open { opacity:1; pointer-events:auto; } .about-close { display:none; } .about-overlay.active { background:rgba(0,0,0,0.75); } .slide-m { position:relative; width:100%; } .wrap-m { position:relative; width:calc(100% - 3rem); cursor:pointer; display:block; margin:0 1.5rem; } .wrap-m img { width:100%; display:block; } .wrap-m::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); pointer-events:none; } .meta-m { position:absolute; bottom:0.75rem; left:2.35rem; pointer-events:none; } .meta-title { display:block; font-size:13px; font-weight:400; letter-spacing:0.06em; color:rgba(255,255,255,0.92); line-height:1.5; margin-bottom:0.15rem; } .meta-type { display:block; font-size:11px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.55); } }
 @media (max-width:900px) and (min-width:601px) { nav { padding:1.25rem 2rem; } .about-panel { width:100%; right:-100%; } }
+#film-grid-overlay { position:fixed; inset:0; z-index:300; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:5.5rem 3rem 2rem; opacity:0; pointer-events:none; transition:opacity 0.2s ease; }
+#film-grid-overlay.active { opacity:1; pointer-events:auto; }
+#film-grid-container { display:grid; gap:0.85rem; width:100%; max-width:1200px; }
+.grid-item { display:flex; flex-direction:column; gap:0.45rem; cursor:pointer; }
+.grid-thumb { aspect-ratio:16/9; overflow:hidden; }
+.grid-thumb img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.35s ease; }
+.grid-item:hover .grid-thumb img { transform:scale(1.04); }
+.grid-title { font-size:11px; letter-spacing:0.07em; font-weight:300; color:rgba(var(--nav-rgb),0.55); line-height:1.45; transition:color 0.2s; }
+.grid-item:hover .grid-title { color:rgba(var(--nav-rgb),1); }
+@media (max-width:600px) { .wrap-m { width:100% !important; margin:0 !important; } .meta-m { left:0.85rem !important; } }
 </style>
 </head>
 <body>
@@ -68,7 +77,7 @@ footer { text-align:center; padding:3rem; font-size:12px; font-weight:400; lette
   <a href="#" id="mob-cine-toggle">cinematographer</a>
   <div class="mobile-submenu" id="mob-cine-sub"></div>
   <a href="digital-large-format.html">digital large format</a>
-  <a href="#" id="mob-about-link">about</a>
+  <a href="#" id="mob-about-link">about me</a>
   
 </div>
 <nav>
@@ -77,24 +86,22 @@ footer { text-align:center; padding:3rem; font-size:12px; font-weight:400; lette
     <li class="nav-item"><a href="#">director</a><div class="dropdown" id="dir-dd"></div></li>
     <li class="nav-item"><a href="#">cinematographer</a><div class="dropdown" id="cine-dd"></div></li>
     <li><a href="digital-large-format.html">digital large format</a></li>
-    <li><a href="#" id="about-link">about</a></li>
+    <li><a href="#" id="about-link">about me</a></li>
     
   </ul>
   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
-<div class="nav-scrim"></div>
 <div class="about-panel" id="aboutPanel">
   <button class="about-close" id="aboutClose">← back</button>
-<p>domen martinčič is a director and cinematographer based in ljubljana. his work spans documentary, short and feature film, with a focus on intimate human stories and striking visual language.</p>
-<p>he studied film directing at the academy of theatre, radio, film and television in ljubljana, and has collaborated with producers and directors across central europe.</p>
-<p>his films have screened at various international festivals and have received recognition for their cinematographic approach and emotional depth.</p>
+
 <div class="contact-block"><span>domen.martincic@email.com</span><span>+386 xx xxx xxx</span><span>ljubljana, slovenia</span></div>
 </div>
 <div id="scx"></div>
 <div id="films-mobile"></div>
 <footer>© <span id="yr"></span> domen martinčič</footer>
+<div id="film-grid-overlay"><div id="film-grid-container"></div></div>
 <script>
-var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#526e79","#526e79"],"imgFit":"natural","slug":"a-tree-grows-in-my-dreams-every-night","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"the roommate","year":"2025","type":"short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736067/theroommate_domen_martincic_3_fus9ke.jpg","grad":["#c6d3df","#c6d3df"],"imgFit":"natural","slug":"the-roommate","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"overtime","year":"in post-production","type":"feature","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775735804/overtime_aron_horvath_7_cw6tyb.jpg","grad":["#c6d6cb","#c6d6cb"],"imgFit":"natural","slug":"overtime","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Diorama","year":"2025","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg","grad":["#cad5c7","#cad5c7"],"imgFit":"fit-height","slug":"diorama","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"The Stranger","year":"2024","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736548/stranger_milorad_milatovic_4_liwuo3.jpg","grad":["#514e42","#514e42"],"imgFit":"fit-height","slug":"the-stranger","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Belart - Triptich","year":"2023","type":"music short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734836/belart_triptih_irena_gatej_4_jrslly.jpg","grad":["#1e1821","#1e1821"],"imgFit":"natural","slug":"belart-triptich","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Joža","year":"2022","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734629/joza_jan_krevatin_5_rjgf1t.jpg","grad":["#c2d5db","#c2d5db"],"imgFit":"fit-height","slug":"jo-a","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"I love you too","year":"2022","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734506/i_ja_tebe_isto_antonio_perina_5_i70oez.jpg","grad":["#211911","#211911"],"imgFit":"natural","slug":"i-love-you-too","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Belart - v noč","year":"2021","type":"music video","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731768/V_NOC.mov_snapshot_01.07.159_jemebt.jpg","grad":["#1f1a0f","#1f1a0f"],"imgFit":"natural","slug":"belart-v-no","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"Rosebud","year":"2020","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731502/2021_06_20_Ruzicnjak.mp4.00_04_43_24.Still004_quecjo.jpg","grad":["#151b24","#151b24"],"imgFit":"fit-height","slug":"rosebud","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"The Last Summer","year":"2020","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775668053/Jost_grade_1_5-37_screenshot_vjfbn2.png","grad":["#c9d5c8","#c9d5c8"],"imgFit":"natural","slug":"the-last-summer","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Free-form Assignment","year":"2018","type":"student short","role":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1776686088/slobodna_domen_martincic_1_aodp3d.jpg","grad":["#1a1a1a","#1a1a1a"],"imgFit":"fit-height","slug":"free-form-assignment","navRgb":"255,255,255","navShadowRgb":"0,0,0"},{"title":"1319th Day","year":"2017","type":"short","role":"director","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736639/1319_dan_martincic_05_dthi5b.jpg","grad":["#c3d6d0","#c3d6d0"],"imgFit":"fit-height","slug":"1319th-day","navRgb":"28,28,28","navShadowRgb":"255,255,255"},{"title":"Ljubljana-München 15:27","year":"2016","type":"short","role":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775847113/lj_mn_01_guatte.jpg","grad":["#d9d0c1","#d9d0c1"],"imgFit":"natural","slug":"ljubljana-m-nchen-15-27","navRgb":"28,28,28","navShadowRgb":"255,255,255"}];
+var films=[{"title":"a tree grows in my dreams every night","year":"2024","type":"documentary","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg","grad":["#526e79","#526e79"],"imgFit":"natural","slug":"a-tree-grows-in-my-dreams-every-night","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"the roommate","year":"2025","type":"short","label":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736067/theroommate_domen_martincic_3_fus9ke.jpg","grad":["#c6d3df","#c6d3df"],"imgFit":"natural","slug":"the-roommate","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"both"},{"title":"overtime","year":"in post-production","type":"feature","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775735804/overtime_aron_horvath_7_cw6tyb.jpg","grad":["#c6d6cb","#c6d6cb"],"imgFit":"natural","slug":"overtime","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"cinematographer"},{"title":"Diorama","year":"2025","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734897/diorama_vida_skerk_4_vlntvy.jpg","grad":["#cad5c7","#cad5c7"],"imgFit":"fit-height","slug":"diorama","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"cinematographer"},{"title":"The Stranger","year":"2024","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736548/stranger_milorad_milatovic_4_liwuo3.jpg","grad":["#514e42","#514e42"],"imgFit":"fit-height","slug":"the-stranger","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"Belart - Triptich","year":"2023","type":"music short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734836/belart_triptih_irena_gatej_4_jrslly.jpg","grad":["#1e1821","#1e1821"],"imgFit":"natural","slug":"belart-triptich","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"Joža","year":"2022","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734629/joza_jan_krevatin_5_rjgf1t.jpg","grad":["#c2d5db","#c2d5db"],"imgFit":"fit-height","slug":"jo-a","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"cinematographer"},{"title":"I love you too","year":"2022","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775734506/i_ja_tebe_isto_antonio_perina_5_i70oez.jpg","grad":["#211911","#211911"],"imgFit":"natural","slug":"i-love-you-too","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"Belart - v noč","year":"2021","type":"music video","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731768/V_NOC.mov_snapshot_01.07.159_jemebt.jpg","grad":["#1f1a0f","#1f1a0f"],"imgFit":"natural","slug":"belart-v-no","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"Rosebud","year":"2020","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775731502/2021_06_20_Ruzicnjak.mp4.00_04_43_24.Still004_quecjo.jpg","grad":["#151b24","#151b24"],"imgFit":"fit-height","slug":"rosebud","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"cinematographer"},{"title":"The Last Summer","year":"2020","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775668053/Jost_grade_1_5-37_screenshot_vjfbn2.png","grad":["#c9d5c8","#c9d5c8"],"imgFit":"natural","slug":"the-last-summer","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"cinematographer"},{"title":"Free-form Assignment","year":"2018","type":"student short","label":"both","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1776686088/slobodna_domen_martincic_1_aodp3d.jpg","grad":["#1a1a1a","#1a1a1a"],"imgFit":"fit-height","slug":"free-form-assignment","navRgb":"255,255,255","navShadowRgb":"0,0,0","role":"both"},{"title":"1319th Day","year":"2017","type":"short","label":"director","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775736639/1319_dan_martincic_05_dthi5b.jpg","grad":["#c3d6d0","#c3d6d0"],"imgFit":"fit-height","slug":"1319th-day","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"director"},{"title":"Ljubljana-München 15:27","year":"2016","type":"short","label":"cinematographer","img":"https://res.cloudinary.com/doeygeuwt/image/upload/v1775847113/lj_mn_01_guatte.jpg","grad":["#d9d0c1","#d9d0c1"],"imgFit":"natural","slug":"ljubljana-m-nchen-15-27","navRgb":"28,28,28","navShadowRgb":"255,255,255","role":"cinematographer"}];
 var scx=document.getElementById('scx'),mob=document.getElementById('films-mobile'),dirDd=document.getElementById('dir-dd'),cineDd=document.getElementById('cine-dd'),mobDirSub=document.getElementById('mob-dir-sub'),mobCineSub=document.getElementById('mob-cine-sub'),GAP=32,META_WIDTH=160;
 films.forEach(function(film,idx){
   var sd=document.createElement('div');sd.className='slide-d';
@@ -161,6 +168,18 @@ window.addEventListener('scroll',function(){var isDesktop=window.innerWidth>600;
 updateBg(0);
 if(mobileSolid&&window.innerWidth<=600){document.documentElement.style.setProperty('--nav-rgb',mobileSolidNavRgb);}
 document.getElementById('yr').textContent=new Date().getFullYear();
+var _go=document.getElementById('film-grid-overlay'),_gc=document.getElementById('film-grid-container'),_ag=null,_ht=null;
+function _ggc(p){var i=Math.min(Math.floor(p),films.length-1),t=Math.min(p-i,1),n=Math.min(i+1,films.length-1);return rgb(lerp(hexToRgb(films[i].grad[0]),hexToRgb(films[n].grad[0]),t));}
+function _cc(n){var avW=_gc.offsetWidth||(window.innerWidth-96),avH=window.innerHeight-244,gap=12,tH=30;for(var c=1;c<=n;c++){var cW=(avW-gap*(c-1))/c,cH=cW*(9/16)+tH+gap,rows=Math.ceil(n/c),tot=rows*cH-gap;if(tot<=avH)return c;}return n;}
+function _bg(group){var items=[];films.forEach(function(f){if(f.role===group||f.role==='both')items.push(f);});var cols=_cc(items.length);_gc.style.gridTemplateColumns='repeat('+cols+',1fr)';_gc.innerHTML=items.map(function(f){var ts=f.img?'':' style="background:linear-gradient(135deg,'+f.grad[0]+','+f.grad[1]+')"';var ih=f.img?'<img src="'+f.img+'" alt="'+f.title+'" loading="lazy">':'';return'<div class="grid-item" data-slug="'+f.slug+'"><div class="grid-thumb"'+ts+'>'+ih+'</div><div class="grid-title">'+f.title+'</div></div>';}).join('');_gc.querySelectorAll('.grid-item').forEach(function(el){el.addEventListener('click',function(){var slug=el.getAttribute('data-slug');_hg();if(slug)window.location.href=slug+'.html';});});}
+function _sg(group){clearTimeout(_ht);if(_ag!==group){_ag=group;_bg(group);}_go.style.background=_ggc(lastProg);_go.classList.add('active');}
+function _hg(){_go.classList.remove('active');_ag=null;}
+function _sh(){_ht=setTimeout(_hg,180);}
+document.querySelectorAll('.nav-item').forEach(function(item){var dd=item.querySelector('.dropdown');if(!dd||(dd.id!=='dir-dd'&&dd.id!=='cine-dd'))return;var group=dd.id==='dir-dd'?'director':'cinematographer';item.addEventListener('mouseenter',function(){_sg(group);});item.addEventListener('mouseleave',function(){_sh();});});
+_go.addEventListener('mouseenter',function(){clearTimeout(_ht);});
+_go.addEventListener('mouseleave',function(){_sh();});
+_go.addEventListener('click',function(e){if(e.target===_go||e.target===_gc)_hg();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')_hg();});
 </script>
 </body>
 </html>
