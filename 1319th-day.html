@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1319th Day — domen martinčič</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzJhMzA1MCIvPjx0ZXh0IHg9IjE2IiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZmZmZiI+ZDwvdGV4dD48L3N2Zz4=">
 <meta name="description" content="man wanders through his life. everything seems the same, but signs of life appear in the most unexpected of places.">
 <meta property="og:type" content="video.movie">
 <meta property="og:title" content="1319th Day — domen martinčič">
@@ -78,9 +79,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem 1
   .right-footer  { order:10; padding:2rem; }
   .gallery-item  { width:100%; }
 }
+* {cursor:none;} #_csq{position:fixed;pointer-events:none;z-index:9999;width:5px;height:5px;background:#1c1c1c;transform:translate(-50%,-50%);}
 </style>
 </head>
 <body>
+<div id="_csq"></div>
 <nav>
   <a class="nav-name" href="index.html">domen martinčič</a>
   <a class="nav-back" href="index.html">← back</a>
@@ -114,6 +117,7 @@ function toggleAcc() {
   toggle.classList.toggle('open');
   body.classList.toggle('open');
 }
+var _csq=document.getElementById('_csq');document.addEventListener('mousemove',function(e){_csq.style.left=e.clientX+'px';_csq.style.top=e.clientY+'px';});
 </script>
 </body>
 </html>
