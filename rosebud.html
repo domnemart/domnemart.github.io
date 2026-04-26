@@ -9,55 +9,60 @@
 <meta property="og:title" content="Rosebud — domen martinčič">
 <meta property="og:description" content="lana and sara are close friends who come together to a house party. lana is in love with sara and tries to discreetly conceal her feelings. when a handsome youn">
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731503/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_01.21.414_gq72mf.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta property="og:url" content="https://domnemart.github.io/rosebud.html">
+<link rel="canonical" href="https://domnemart.github.io/rosebud.html">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter', sans-serif; background:#e7bce5; color:#1c1c1c; text-transform:lowercase; min-height:100vh; }
-nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
-.nav-name { font-size:15px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.6); text-decoration:none; }
-.nav-back { font-size:13px; font-weight:400; letter-spacing:0.2em; color:rgba(28,28,28,0.4); text-decoration:none; transition:color 0.2s; }
+body { font-family:'Roboto Mono', monospace; background:#e7bce5; color:#1c1c1c;  min-height:100vh; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem 1.5rem 2.5rem; display:flex; justify-content:space-between; align-items:center; }
+.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(28,28,28,0.6); text-decoration:none; }
+.nav-back { font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(28,28,28,0.4); text-decoration:none; transition:color 0.2s; }
 .nav-back:hover { color:rgba(28,28,28,0.8); }
 .split { display:grid; grid-template-columns:320px 1fr; min-height:100vh; padding-top:60px; }
 .left { position:sticky; top:60px; max-height:calc(100vh - 60px); overflow-y:auto; scrollbar-width:none; padding:3rem 2.5rem; display:flex; flex-direction:column; justify-content:space-between; gap:2rem; }
 .left::-webkit-scrollbar { display:none; }
 .left-top { display:flex; flex-direction:column; gap:2rem; }
-.film-title { font-size:20px; font-weight:400; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
-.film-title-orig { font-size:20px; font-weight:400; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
+.left-bottom { display:flex; flex-direction:column; gap:2rem; }
+.film-title { font-size:19px; font-weight:300; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
+.film-title-orig { font-size:19px; font-weight:300; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
 .film-title-orig::before { content:'/ '; }
 .left-top h1 + .film-title-orig { margin-top:-1.5rem; }
 .film-basic { display:flex; flex-direction:column; gap:0.35rem; }
-.film-basic span { font-size:13px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.35); }
-.synopsis p { font-size:13px; font-weight:400; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); }
+.film-basic span { font-size:12px; font-weight:300; letter-spacing:0.15em; color:rgba(28,28,28,0.35); }
+.synopsis p { font-size:12px; font-weight:300; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); }
 .credits { display:flex; flex-direction:column; gap:0.9rem; }
 .credit-item { display:flex; flex-direction:column; gap:0.2rem; }
-.credit-label { font-size:11px; letter-spacing:0.25em; color:rgba(28,28,28,0.2); }
-.credit-value { font-size:13px; font-weight:400; letter-spacing:0.1em; color:rgba(28,28,28,0.6); }
+.credit-label { font-size:10px; letter-spacing:0.25em; color:rgba(28,28,28,0.2); }
+.credit-value { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(28,28,28,0.6); }
 .accordion { display:flex; flex-direction:column; gap:0; }
-.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif; font-size:11px; font-weight:400; letter-spacing:0.25em; color:rgba(28,28,28,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
+.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Roboto Mono', monospace; font-size:10px; font-weight:300; letter-spacing:0.25em; color:rgba(28,28,28,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left;  transition:color 0.2s; }
 .accordion-toggle:hover { color:rgba(28,28,28,0.7); }
-.accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:10px; }
+.accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:9px; }
 .accordion-toggle.open .acc-arrow { transform:rotate(180deg); }
 .accordion-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.3s ease; }
 .accordion-body.open { grid-template-rows:1fr; }
 .accordion-inner { overflow:hidden; padding-bottom:0.5rem; }
-.festival-item { font-size:13px; font-weight:400; letter-spacing:0.06em; color:rgba(28,28,28,0.55); line-height:1.8; padding:0.2rem 0; }
-.festival-item .fest-award { font-size:11px; letter-spacing:0.15em; color:rgba(28,28,28,0.25); display:block; }
-.links-block { margin-top:2rem; display:flex; flex-direction:column; gap:0.35rem; }
-.imdb-btn { display:block; font-size:12px; font-weight:400; letter-spacing:0.2em; color:rgba(28,28,28,0.45); text-decoration:none; transition:color 0.2s; }
+.festival-item { font-size:12px; font-weight:300; letter-spacing:0.06em; color:rgba(28,28,28,0.55); line-height:1.8; padding:0.2rem 0; }
+.festival-item .fest-award { font-size:10px; letter-spacing:0.15em; color:rgba(28,28,28,0.25); display:block; }
+.links-block { display:flex; flex-direction:column; gap:0.35rem; }
+.imdb-btn { display:block; font-size:11px; font-weight:300; letter-spacing:0.2em; color:rgba(28,28,28,0.45); text-decoration:none; transition:color 0.2s; }
 .imdb-btn:hover { color:rgba(28,28,28,0.9); }
 .right { padding:3rem 3rem 0; display:flex; flex-direction:column; gap:4px; }
-.right-footer { text-align:center; padding:2rem 0; font-size:12px; letter-spacing:0.2em; color:rgba(28,28,28,0.15); margin-top:2rem; }
-.hero-img { width:100%; aspect-ratio:16/9; overflow:hidden; margin-bottom:4px; }
-.hero-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.right-footer { text-align:center; padding:2rem 0; font-size:11px; letter-spacing:0.2em; color:rgba(28,28,28,0.15); margin-top:2rem; }
+.hero-img { width:100%; margin-bottom:4px; }
+.hero-img img { width:100%; height:auto; display:block; }
 .hero-video { width:100%; aspect-ratio:16/9; background:#000; margin-bottom:4px; }
 .hero-video iframe { width:100%; height:100%; border:none; display:block; }
 .gallery { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
-.gallery-item { aspect-ratio:16/9; overflow:hidden; }
-.gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
+.gallery-item {  }
+.gallery-item img { width:100%; height:auto; display:block; }
 @media (max-width:768px) {
+  nav { padding:1.25rem 1.5rem; }
   .split { display:flex; flex-direction:column; }
   .left { display:contents; }
   .left-top { display:contents; }
+  .left-bottom { display:contents; }
   .right { display:contents; }
   .film-title    { order:1; padding:1.25rem 1.5rem 0.25rem; }
   .film-title-orig { order:2; padding:0 1.5rem 0.75rem; margin-top:0 !important; }
@@ -71,7 +76,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
   .links-block   { order:9; margin:1.25rem 1.5rem 0; }
   .imdb-btn      { margin:0; }
   .right-footer  { order:10; padding:2rem; }
-  .gallery-item  { aspect-ratio:16/9; width:100%; }
+  .gallery-item  { width:100%; }
 }
 </style>
 </head>
@@ -85,16 +90,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
     <div class="left-top">
       <h1 class="film-title">Rosebud</h1>
       <p class="film-title-orig">Ružičnjak</p>
-      <div class="film-basic"><span>2020</span><span>short</span><span>9 min</span></div>
+      <div class="film-basic"><span>2020</span><span>short</span><span>9'</span></div>
       <div class="synopsis"><p>lana and sara are close friends who come together to a house party. lana is in love with sara and tries to discreetly conceal her feelings. when a handsome young man appears at the gathering and captures sara's attention, tensions between lana and sara surface from the subconscious and become clear to everyone. or do they?</p></div>
     </div>
-    <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Vida Skerk</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">domen martinčič</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value">ADU</span></div></div>
-    
-    
+    <div class="left-bottom">
+      <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Vida Skerk</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">domen martinčič</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value">ADU</span></div></div>
+      
+      
+    </div>
   </div>
   <div class="right">
-    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731503/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_01.21.414_gq72mf.jpg" alt="Rosebud" style="object-fit:cover;" ></div>
-    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731503/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_06.17.553_wsov3m.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731504/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_07.20.184_wgxupl.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731590/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_03.02.406_nrhgwr.jpg" alt="" style="object-fit:cover;" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775731502/2021_06_20_Ruzicnjak.mp4.00_04_43_24.Still004_quecjo.jpg" alt="" style="object-fit:cover;" ></div></div>
+    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775731503/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_01.21.414_gq72mf.jpg" alt="Rosebud" ></div>
+    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775731503/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_06.17.553_wsov3m.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775731504/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_07.20.184_wgxupl.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775731590/Rastanak_GRADE_DNXHD_145_1.mov_snapshot_03.02.406_nrhgwr.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775731502/2021_06_20_Ruzicnjak.mp4.00_04_43_24.Still004_quecjo.jpg" alt="" ></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
