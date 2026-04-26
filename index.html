@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>domen martinčič</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzJhMzA1MCIvPjx0ZXh0IHg9IjE2IiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZmZmZiI+ZDwvdGV4dD48L3N2Zz4=">
-<meta name="description" content="Domen Martinčič is a filmmaker who works as both a director and director of photography. He trained at AGRFT Ljubljana and ADU Zagreb, completing master's degre">
+<meta name="description" content="Domen Martinčič is a filmmaker and director of photography. He studied film directing at AGRFT Ljubljana and later cinematography at ADU Zagreb, earning master'">
 <meta property="og:type" content="website">
 <meta property="og:title" content="domen martinčič">
-<meta property="og:description" content="Domen Martinčič is a filmmaker who works as both a director and director of photography. He trained at AGRFT Ljubljana and ADU Zagreb, completing master's degre">
+<meta property="og:description" content="Domen Martinčič is a filmmaker and director of photography. He studied film directing at AGRFT Ljubljana and later cinematography at ADU Zagreb, earning master'">
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775654067/ATreeGrowsInMyDreams_Preview_Vimeo_260523.mp4_snapshot_05.33.286_l9b5lc.jpg">
 <meta property="og:url" content="https://domnemart.github.io/index.html">
 <link rel="canonical" href="https://domnemart.github.io/index.html">
@@ -69,11 +69,9 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
 .grid-title { font-size:11px; letter-spacing:0.07em; font-weight:300; color:rgba(var(--nav-rgb),0.55); line-height:1.45; transition:color 0.2s; }
 .grid-item:hover .grid-title { color:rgba(var(--nav-rgb),1); }
 @media (max-width:600px) { .wrap-m { width:100% !important; margin:0 !important; } .meta-m { left:0.85rem !important; } }
-* {cursor:none;} #_csq{position:fixed;pointer-events:none;z-index:9999;width:5px;height:5px;background:rgb(var(--nav-rgb));transform:translate(-50%,-50%);}
 </style>
 </head>
 <body>
-<div id="_csq"></div>
 <canvas class="bg-canvas" id="bgCanvas"></canvas>
 <div class="about-overlay" id="aboutOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
@@ -98,8 +96,7 @@ footer { text-align:center; padding:3rem; font-size:11px; font-weight:300; lette
 </nav>
 <div class="about-panel" id="aboutPanel">
   <button class="about-close" id="aboutClose">← back</button>
-<p>Domen Martinčič is a filmmaker who works as both a director and director of photography. He trained at AGRFT Ljubljana and ADU Zagreb, completing master's degrees in both disciplines.</p>
-<p>His films have been selected for festivals including Karlovy Vary IFF, Sarajevo Film Festival, and Thessaloniki IDFF. He works across film, video, and theatre.</p>
+<p>Domen Martinčič is a filmmaker and director of photography. He studied film directing at AGRFT Ljubljana and later cinematography at ADU Zagreb, earning master's degrees in both. His work — as director and DoP — has screened at festivals including Karlovy Vary IFF, Sarajevo Film Festival, and Thessaloniki IDFF. He works in film, video, and theatre.</p>
 <div class="contact-block"><span>contact@domenmartincic.com</span><span>+386 40 885 534</span><span>ljubljana, slovenia</span></div>
 </div>
 <div id="scx"></div>
@@ -174,7 +171,6 @@ window.addEventListener('scroll',function(){if(!films.length)return;var isDeskto
 updateBg(0);
 if(mobileSolid&&window.innerWidth<=600){document.documentElement.style.setProperty('--nav-rgb',mobileSolidNavRgb);}
 document.getElementById('yr').textContent=new Date().getFullYear();
-var _csq=document.getElementById('_csq');document.addEventListener('mousemove',function(e){_csq.style.left=e.clientX+'px';_csq.style.top=e.clientY+'px';});
 var _go=document.getElementById('film-grid-overlay'),_gc=document.getElementById('film-grid-container'),_ag=null,_ht=null;
 function _ggc(p){if(!films.length)return'rgb(26,31,46)';var i=Math.min(Math.floor(p),films.length-1),t=Math.min(p-i,1),n=Math.min(i+1,films.length-1);return rgb(lerp(hexToRgb(films[i].grad[0]),hexToRgb(films[n].grad[0]),t));}
 function _cc(n){var avW=_gc.offsetWidth||(window.innerWidth-96),avH=window.innerHeight-244,gap=12,tH=30;for(var c=1;c<=n;c++){var cW=(avW-gap*(c-1))/c,cH=cW*(9/16)+tH+gap,rows=Math.ceil(n/c),tot=rows*cH-gap;if(tot<=avH)return c;}return n;}
