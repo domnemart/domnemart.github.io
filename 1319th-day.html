@@ -9,44 +9,47 @@
 <meta property="og:title" content="1319th Day — domen martinčič">
 <meta property="og:description" content="man wanders through his life. everything seems the same, but signs of life appear in the most unexpected of places.">
 <meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736647/1319_dan_martincic_08_eyxcpk.jpg">
+<meta property="og:url" content="https://domnemart.github.io/1319th-day.html">
+<link rel="canonical" href="https://domnemart.github.io/1319th-day.html">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter', sans-serif; background:#ebe9e2; color:#1c1c1c; text-transform:lowercase; min-height:100vh; }
-nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
-.nav-name { font-size:15px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.6); text-decoration:none; }
-.nav-back { font-size:13px; font-weight:400; letter-spacing:0.2em; color:rgba(28,28,28,0.4); text-decoration:none; transition:color 0.2s; }
+body { font-family:'Inter', sans-serif; background:#ebe9e2; color:#1c1c1c;  min-height:100vh; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem 1.5rem 2.5rem; display:flex; justify-content:space-between; align-items:center; }
+.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(28,28,28,0.6); text-decoration:none; }
+.nav-back { font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(28,28,28,0.4); text-decoration:none; transition:color 0.2s; }
 .nav-back:hover { color:rgba(28,28,28,0.8); }
 .split { display:grid; grid-template-columns:320px 1fr; min-height:100vh; padding-top:60px; }
 .left { position:sticky; top:60px; max-height:calc(100vh - 60px); overflow-y:auto; scrollbar-width:none; padding:3rem 2.5rem; display:flex; flex-direction:column; justify-content:space-between; gap:2rem; }
 .left::-webkit-scrollbar { display:none; }
 .left-top { display:flex; flex-direction:column; gap:2rem; }
-.film-title { font-size:20px; font-weight:400; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
-.film-title-orig { font-size:20px; font-weight:400; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
+.left-bottom { display:flex; flex-direction:column; gap:2rem; }
+.film-title { font-size:19px; font-weight:300; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
+.film-title-orig { font-size:19px; font-weight:300; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
 .film-title-orig::before { content:'/ '; }
 .left-top h1 + .film-title-orig { margin-top:-1.5rem; }
 .film-basic { display:flex; flex-direction:column; gap:0.35rem; }
-.film-basic span { font-size:13px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.35); }
-.synopsis p { font-size:13px; font-weight:400; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); }
+.film-basic span { font-size:12px; font-weight:300; letter-spacing:0.15em; color:rgba(28,28,28,0.35); }
+.synopsis p { font-size:12px; font-weight:300; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); }
 .credits { display:flex; flex-direction:column; gap:0.9rem; }
 .credit-item { display:flex; flex-direction:column; gap:0.2rem; }
-.credit-label { font-size:11px; letter-spacing:0.25em; color:rgba(28,28,28,0.2); }
-.credit-value { font-size:13px; font-weight:400; letter-spacing:0.1em; color:rgba(28,28,28,0.6); }
+.credit-label { font-size:10px; letter-spacing:0.25em; color:rgba(28,28,28,0.2); }
+.credit-value { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(28,28,28,0.6); }
 .accordion { display:flex; flex-direction:column; gap:0; }
-.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif; font-size:11px; font-weight:400; letter-spacing:0.25em; color:rgba(28,28,28,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left; text-transform:lowercase; transition:color 0.2s; }
+.accordion-toggle { display:flex; justify-content:space-between; align-items:center; font-family:'Inter', sans-serif; font-size:10px; font-weight:300; letter-spacing:0.25em; color:rgba(28,28,28,0.35); background:none; border:none; padding:0.75rem 0; cursor:pointer; width:100%; text-align:left;  transition:color 0.2s; }
 .accordion-toggle:hover { color:rgba(28,28,28,0.7); }
-.accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:10px; }
+.accordion-toggle .acc-arrow { transition:transform 0.3s ease; font-size:9px; }
 .accordion-toggle.open .acc-arrow { transform:rotate(180deg); }
 .accordion-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.3s ease; }
 .accordion-body.open { grid-template-rows:1fr; }
 .accordion-inner { overflow:hidden; padding-bottom:0.5rem; }
-.festival-item { font-size:13px; font-weight:400; letter-spacing:0.06em; color:rgba(28,28,28,0.55); line-height:1.8; padding:0.2rem 0; }
-.festival-item .fest-award { font-size:11px; letter-spacing:0.15em; color:rgba(28,28,28,0.25); display:block; }
-.links-block { margin-top:2rem; display:flex; flex-direction:column; gap:0.35rem; }
-.imdb-btn { display:block; font-size:12px; font-weight:400; letter-spacing:0.2em; color:rgba(28,28,28,0.45); text-decoration:none; transition:color 0.2s; }
+.festival-item { font-size:12px; font-weight:300; letter-spacing:0.06em; color:rgba(28,28,28,0.55); line-height:1.8; padding:0.2rem 0; }
+.festival-item .fest-award { font-size:10px; letter-spacing:0.15em; color:rgba(28,28,28,0.25); display:block; }
+.links-block { display:flex; flex-direction:column; gap:0.35rem; }
+.imdb-btn { display:block; font-size:11px; font-weight:300; letter-spacing:0.2em; color:rgba(28,28,28,0.45); text-decoration:none; transition:color 0.2s; }
 .imdb-btn:hover { color:rgba(28,28,28,0.9); }
 .right { padding:3rem 3rem 0; display:flex; flex-direction:column; gap:4px; }
-.right-footer { text-align:center; padding:2rem 0; font-size:12px; letter-spacing:0.2em; color:rgba(28,28,28,0.15); margin-top:2rem; }
+.right-footer { text-align:center; padding:2rem 0; font-size:11px; letter-spacing:0.2em; color:rgba(28,28,28,0.15); margin-top:2rem; }
 .hero-img { width:100%; margin-bottom:4px; }
 .hero-img img { width:100%; height:auto; display:block; }
 .hero-video { width:100%; aspect-ratio:16/9; background:#000; margin-bottom:4px; }
@@ -55,9 +58,11 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .gallery-item {  }
 .gallery-item img { width:100%; height:auto; display:block; }
 @media (max-width:768px) {
+  nav { padding:1.25rem 1.5rem; }
   .split { display:flex; flex-direction:column; }
   .left { display:contents; }
   .left-top { display:contents; }
+  .left-bottom { display:contents; }
   .right { display:contents; }
   .film-title    { order:1; padding:1.25rem 1.5rem 0.25rem; }
   .film-title-orig { order:2; padding:0 1.5rem 0.75rem; margin-top:0 !important; }
@@ -85,16 +90,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
     <div class="left-top">
       <h1 class="film-title">1319th Day</h1>
       <p class="film-title-orig">1319. dan</p>
-      <div class="film-basic"><span>2017</span><span>short</span><span>20 min</span></div>
+      <div class="film-basic"><span>2017</span><span>short</span><span>20'</span></div>
       <div class="synopsis"><p>man wanders through his life. everything seems the same, but signs of life appear in the most unexpected of places.</p></div>
     </div>
-    <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Domen Martinčič</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">Rok K. Nagode</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value">AGRFT</span></div><div class="credit-item"><span class="credit-label">editor</span><span class="credit-value">Matic Drakulić</span></div><div class="credit-item"><span class="credit-label">art director</span><span class="credit-value">Neža Zinajić</span></div></div>
-    <div class="accordion"><button class="accordion-toggle" id="fest-toggle" onclick="toggleAcc()">festivals / awards <span class="acc-arrow">▼</span></button><div class="accordion-body" id="fest-body"><div class="accordion-inner"><div class="festival-item">festival européen du film court de nice, 2017</div><div class="festival-item">sff - slow film festival, 2017</div></div></div></div>
-    <div class="links-block"><a class="imdb-btn" href="https://www.imdb.com/title/tt7773682/?ref_=nv_sr_srsg_2_tt_7_nm_1_in_0_q_1319" target="_blank">imdb →</a></div>
+    <div class="left-bottom">
+      <div class="credits"><div class="credit-item"><span class="credit-label">director</span><span class="credit-value">Domen Martinčič</span></div><div class="credit-item"><span class="credit-label">cinematographer</span><span class="credit-value">Rok K. Nagode</span></div><div class="credit-item"><span class="credit-label">production</span><span class="credit-value">AGRFT</span></div><div class="credit-item"><span class="credit-label">editor</span><span class="credit-value">Matic Drakulić</span></div><div class="credit-item"><span class="credit-label">art director</span><span class="credit-value">Neža Zinajić</span></div></div>
+      <div class="accordion"><button class="accordion-toggle" id="fest-toggle" onclick="toggleAcc()">festivals / awards <span class="acc-arrow">▼</span></button><div class="accordion-body" id="fest-body"><div class="accordion-inner"><div class="festival-item">festival européen du film court de nice, 2017</div><div class="festival-item">sff - slow film festival, 2017</div></div></div></div>
+      <div class="links-block"><a class="imdb-btn" href="https://www.imdb.com/title/tt7773682/?ref_=nv_sr_srsg_2_tt_7_nm_1_in_0_q_1319" target="_blank">imdb →</a></div>
+    </div>
   </div>
   <div class="right">
-    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736647/1319_dan_martincic_08_eyxcpk.jpg" alt="1319th Day" ></div>
-    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736641/1319_dan_martincic_06_zyvjrv.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736636/1319_dan_martincic_04_crbrup.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736634/1319_dan_martincic_03_okvvce.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/v1775736631/1319_dan_martincic_02_ap2bqn.jpg" alt="" ></div></div>
+    <div class="hero-img"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775736647/1319_dan_martincic_08_eyxcpk.jpg" alt="1319th Day" ></div>
+    <div class="gallery"><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775736641/1319_dan_martincic_06_zyvjrv.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775736636/1319_dan_martincic_04_crbrup.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775736634/1319_dan_martincic_03_okvvce.jpg" alt="" ></div><div class="gallery-item"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/e_contrast:10/v1775736631/1319_dan_martincic_02_ap2bqn.jpg" alt="" ></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
