@@ -4,36 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>digital large format — domen martinčič</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzJhMzA1MCIvPjx0ZXh0IHg9IjE2IiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2ZmZmZmZiI+ZDwvdGV4dD48L3N2Zz4=">
 <meta property="og:type" content="website">
 <meta property="og:title" content="digital large format — domen martinčič">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://res.cloudinary.com/doeygeuwt/image/upload/c_crop,g_north_west,h_761,w_1200,y_39/c_scale,w_1000/e_sharpen:79/_1437555_darken_qqe4tu.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Roboto Mono', monospace; background:linear-gradient(135deg,#1a1f2e,#2a2035); color:#ffffff; text-transform:lowercase; min-height:100vh; }
-nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; display:flex; justify-content:space-between; align-items:center; }
-.nav-name { font-size:14px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.6); text-decoration:none; }
-.nav-back { font-size:12px; font-weight:300; letter-spacing:0.2em; color:rgba(255,255,255,0.4); text-decoration:none; transition:color 0.2s; }
-.nav-back:hover { color:rgba(255,255,255,0.8); }
+body { font-family:'Inter', sans-serif; background:linear-gradient(135deg,#e8e8e8,#e8e8e8); color:#1c1c1c; text-transform:lowercase; min-height:100vh; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem 1.5rem 2.5rem; display:flex; justify-content:space-between; align-items:center; }
+.nav-name { font-size:14px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.6); text-decoration:none; }
+.nav-back { font-size:12px; font-weight:400; letter-spacing:0.2em; color:rgba(28,28,28,0.4); text-decoration:none; transition:color 0.2s; }
+.nav-back:hover { color:rgba(28,28,28,0.8); }
 .split { display:grid; grid-template-columns:320px 1fr; min-height:100vh; padding-top:60px; }
 .left { position:sticky; top:60px; height:calc(100vh - 60px); padding:3rem 2.5rem; display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto; scrollbar-width:none; }
 .left::-webkit-scrollbar { display:none; }
 .left-top { display:flex; flex-direction:column; gap:2rem; }
-.page-title { font-size:19px; font-weight:300; letter-spacing:0.06em; line-height:1.5; color:rgba(255,255,255,0.9); }
-.page-subtitle { font-size:12px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.35); margin-top:0.5rem; }
-.description p { font-size:12px; font-weight:300; letter-spacing:0.05em; line-height:2; color:rgba(255,255,255,0.5); margin-bottom:1rem; }
+.page-title { font-size:19px; font-weight:400; letter-spacing:0.06em; line-height:1.5; color:rgba(28,28,28,0.9); }
+.page-subtitle { font-size:12px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.35); margin-top:0.5rem; }
+.description p { font-size:12px; font-weight:400; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); margin-bottom:1rem; }
 .description p:last-child { margin-bottom:0; }
 .related { display:flex; flex-direction:column; gap:0.75rem; }
-.related-label { font-size:10px; letter-spacing:0.3em; color:rgba(255,255,255,0.2); margin-bottom:0.25rem; }
-.related-link { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.5); text-decoration:none; display:flex; justify-content:space-between; align-items:baseline; transition:color 0.2s; gap:1rem; }
-.related-link:hover { color:rgba(255,255,255,0.9); }
-.related-link .link-year { font-size:11px; color:rgba(255,255,255,0.2); flex-shrink:0; }
-.related-link:hover .link-year { color:rgba(255,255,255,0.5); }
+.related-label { font-size:10px; letter-spacing:0.3em; color:rgba(28,28,28,0.2); margin-bottom:0.25rem; }
+.related-link { font-size:12px; font-weight:400; letter-spacing:0.1em; color:rgba(28,28,28,0.5); text-decoration:none; display:flex; justify-content:space-between; align-items:baseline; transition:color 0.2s; gap:1rem; }
+.related-link:hover { color:rgba(28,28,28,0.9); }
+.related-link .link-year { font-size:11px; color:rgba(28,28,28,0.2); flex-shrink:0; }
+.related-link:hover .link-year { color:rgba(28,28,28,0.5); }
 .specs { display:flex; flex-direction:column; gap:0.85rem; }
 .spec-item { display:flex; flex-direction:column; gap:0.2rem; }
-.spec-label { font-size:10px; letter-spacing:0.25em; color:rgba(255,255,255,0.2); }
-.spec-value { font-size:12px; font-weight:300; letter-spacing:0.1em; color:rgba(255,255,255,0.6); }
+.spec-label { font-size:10px; letter-spacing:0.25em; color:rgba(28,28,28,0.2); }
+.spec-value { font-size:12px; font-weight:400; letter-spacing:0.1em; color:rgba(28,28,28,0.6); }
 .right { padding:3rem 3rem 0; display:flex; flex-direction:column; gap:1.5rem; }
-.right-footer { text-align:center; padding:2rem 0; font-size:11px; letter-spacing:0.2em; color:rgba(255,255,255,0.15); margin-top:2rem; }
+.right-footer { text-align:center; padding:2rem 0; font-size:11px; letter-spacing:0.2em; color:rgba(28,28,28,0.15); margin-top:2rem; }
 .img-full { width:100%; aspect-ratio:16/9; overflow:hidden; }
 .img-full img { width:100%; height:100%; object-fit:cover; display:block; }
 .img-full.clickable { cursor:pointer; }
@@ -45,16 +47,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
 .img-grid-item.clickable { cursor:pointer; }
 .img-grid-item.clickable img { transition:filter 0.15s; }
 .img-grid-item.clickable:hover img { filter:brightness(1.07); }
-.img-grid-item.placeholder { background:rgba(255,255,255,0.04); }
+.img-grid-item.placeholder { background:rgba(28,28,28,0.04); }
 #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; }
 #lb.open { display:flex; }
 #lb img { max-width:90vw; max-height:90vh; object-fit:contain; }
-.text-block { padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.07); }
-.text-block p { font-size:12px; font-weight:300; letter-spacing:0.05em; line-height:2; color:rgba(255,255,255,0.5); margin-bottom:0.75rem; }
+.text-block { padding:1.5rem 0; border-top:1px solid rgba(28,28,28,0.07); }
+.text-block p { font-size:12px; font-weight:400; letter-spacing:0.05em; line-height:2; color:rgba(28,28,28,0.5); margin-bottom:0.75rem; }
 .text-block p:last-child { margin-bottom:0; }
-.text-block h2 { font-size:12px; font-weight:400; letter-spacing:0.2em; color:rgba(255,255,255,0.35); margin-bottom:0.75rem; }
+.text-block h2 { font-size:12px; font-weight:500; letter-spacing:0.2em; color:rgba(28,28,28,0.35); margin-bottom:0.75rem; }
 .text-block.no-border { border-top:none; }
-.img-caption { font-size:10px; font-weight:300; letter-spacing:0.15em; color:rgba(255,255,255,0.25); margin-top:-1rem; }
+.img-caption { font-size:10px; font-weight:400; letter-spacing:0.15em; color:rgba(28,28,28,0.25); margin-top:-1rem; }
 @media (max-width:768px) { nav { padding:1.25rem 1.5rem; } .split { grid-template-columns:1fr; } .left { position:static; height:auto; } .right { padding:0 1.5rem; gap:1rem; } .img-grid { grid-template-columns:1fr; gap:0.5rem; } .right-footer { padding:2rem; } .text-block { padding:1rem 0; } }
 </style>
 </head>
@@ -68,13 +70,20 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem; 
     <div class="left-top">
       <div>
         <h1 class="page-title">digital large format</h1>
-        <p class="page-subtitle">phase one / IQ4 150mp</p>
+        <p class="page-subtitle">shallow depth-of-field and tilt + shitft</p>
       </div>
+      <div class="related"><span class="related-label">used on</span><a class="related-link" href="#">Diorama<span class="link-year"></span></a></div>
     </div>
     <div class="specs"><div class="spec-item"><span class="spec-label">sensor</span><span class="spec-value"></span></div><div class="spec-item"><span class="spec-label">resolution</span><span class="spec-value"></span></div><div class="spec-item"><span class="spec-label">dynamic range</span><span class="spec-value"></span></div></div>
   </div>
   <div class="right">
-    <div class="text-block"><h2>cascac</h2><p>sacasca</p></div>
+    <div class="img-full" style="background:#e8e8e8"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/c_crop,g_north_west,h_761,w_1200,y_39/c_scale,w_1000/e_sharpen:79/_1437555_darken_qqe4tu.jpg" alt="" style="object-fit:contain"></div>
+    <div class="text-block"><p>ever since i first saw an image through the ground glass of a medium-format camera, which seemed magical and astoundingly three-dimensional to me, i wanted to use that image for filmmaking.
+the opportunity came when i had the chance to shoot the film diorama directed by vida skerk.</p></div>
+    <div class="img-grid"><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1775734895/diorama_vida_skerk_1_no8bur.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1775734896/diorama_vida_skerk_2_cpd8av.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1775734897/diorama_vida_skerk_4_vlntvy.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1775734904/diorama_vida_skerk_10_yivnzr.jpg" alt="" style="width:100%;height:auto"></div></div>
+    <div class="text-block"><p>the theme of the film is the fragility and unreliability of memory, so i conceived a visual concept that would emphasize this with its softness and extremely shallow depth of field. the setting of the film suggests the feeling of a diorama, a miniature, which could be somewhat achieved using a tilt-shift lens, but i wanted a more comprehensive approach.
+i made a device that acts as an adapter for a digital camera. for filming, i used a large-format industar 37 lens, and its image is projected onto a ground-glass-like surface, which is then captured by a digital camera. the large-format digital system allows for manual focusing during filming, as well as 'tilt' and 'shift' movements of the lens.</p></div>
+    <div class="img-grid"><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1776853651/_1437714_oahs2a.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1776853643/_1437492_ipmdxn.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1776853652/_1437846_xochaz.jpg" alt="" style="width:100%;height:auto"></div><div class="img-grid-item clickable" style="aspect-ratio:auto;overflow:visible"><img src="https://res.cloudinary.com/doeygeuwt/image/upload/q_100/v1776853649/_1437620_dt7uht.jpg" alt="" style="width:100%;height:auto"></div></div>
     <div class="right-footer">© <span id="yr"></span> domen martinčič</div>
   </div>
 </div>
