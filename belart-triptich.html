@@ -77,11 +77,9 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 3rem 1
   .right-footer  { order:10; padding:2rem; }
   .gallery-item  { width:100%; }
 }
-* {cursor:none;} #_csq{position:fixed;pointer-events:none;z-index:9999;width:5px;height:5px;background:#ffffff;transform:translate(-50%,-50%);}
 </style>
 </head>
 <body>
-<div id="_csq"></div>
 <nav>
   <a class="nav-name" href="index.html">domen martinčič</a>
   <a class="nav-back" href="index.html">← back</a>
@@ -115,7 +113,6 @@ function toggleAcc() {
   toggle.classList.toggle('open');
   body.classList.toggle('open');
 }
-var _csq=document.getElementById('_csq');document.addEventListener('mousemove',function(e){_csq.style.left=e.clientX+'px';_csq.style.top=e.clientY+'px';});
 </script>
 </body>
 </html>
