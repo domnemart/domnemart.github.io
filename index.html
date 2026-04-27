@@ -115,7 +115,7 @@ films.forEach(function(film,idx){
   else{wd.style.aspectRatio='16/9';wd.style.background=film.grad[0];}
   var md=document.createElement('div');md.className='film-meta';
   md.innerHTML='<span class="meta-value">'+film.title+'</span><span class="meta-value">'+film.year+'</span><span class="meta-value">'+film.type+'</span>';
-  if(film.slug){wd.addEventListener('click',function(){window.location.href=film.slug+'.html';});}
+  if(film.slug){wd.addEventListener('click',function(){window.location.href=film.slug+'.html';});md.style.cursor='pointer';md.style.pointerEvents='auto';md.addEventListener('click',function(){window.location.href=film.slug+'.html';});}
   sd.appendChild(wd);sd.appendChild(md);scx.appendChild(sd);
   var sm=document.createElement('div');sm.className='slide-m';sm.id='sm-'+idx;
   var wm=document.createElement('div');wm.className='wrap-m';
